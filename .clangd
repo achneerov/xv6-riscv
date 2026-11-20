@@ -1,0 +1,5 @@
+# xv6 runs on RISC-V; mkfs is a separate program built for the host.
+If:
+  PathMatch: (kernel|user)/.*
+CompileFlags:
+  Add: [-xc, --target=riscv64-unknown-elf, -march=rv64gc, -ffreestanding, -fno-builtin]
